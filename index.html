@@ -1,23 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مدونة الاتصال العربي – الصفحة الرئيسية</title>
+  <meta name="description" content="مرحبًا بك في مدونة الاتصال العربي – منصة للمقالات، الأخبار، والنصائح في مجال الاتصالات والتكنولوجيا.">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Cairo, Tajawal, sans-serif;
+      line-height: 1.6;
+      background: #f9fafb;
+      color: #111827;
+    }
+    header {
+      background: linear-gradient(135deg, #0ea5e9, #22d3ee);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    header h1 { font-size: 2.5rem; margin: 0; }
+    header p { margin-top: .5rem; font-size: 1.2rem; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: .75rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #0ea5e9;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: #e0f2fe;
+    }
+    .hero h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.1rem; margin-bottom: 2rem; }
+    .hero a {
+      background: #0ea5e9;
+      color: #fff;
+      padding: .75rem 1.5rem;
+      border-radius: .5rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .hero a:hover { background: #0284c7; }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: .75rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,.05);
+      text-align: center;
+    }
+    .card h3 { margin-top: 0; color: #0ea5e9; }
+
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+    footer a { color: #22d3ee; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>مدونة الاتصال العربي</h1>
+    <p>وجهتك الأولى لآخر أخبار ومقالات الاتصالات والتكنولوجيا</p>
+  </header>
+
+  <nav>
+    <a href="#about">عن المدونة</a>
+    <a href="#articles">المقالات</a>
+    <a href="#features">مميزاتنا</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+
+  <section class="hero">
+    <h2>اكتشف مستقبل الاتصال</h2>
+    <p>انضم إلينا لمتابعة أحدث المقالات والنصائح في عالم التكنولوجيا والاتصال.</p>
+    <a href="#articles">تصفح المقالات</a>
+  </section>
+
+  <section id="features" class="features">
+    <div class="card">
+      <h3>محتوى متميز</h3>
+      <p>مقالات تحليلية ونصائح عملية يقدمها خبراء في مجال الاتصال.</p>
+    </div>
+    <div class="card">
+      <h3>تحديثات دورية</h3>
+      <p>أخبار وتقارير حديثة تُبقيك على اطلاع دائم بما يحدث في عالم التكنولوجيا.</p>
+    </div>
+    <div class="card">
+      <h3>مجتمع نشط</h3>
+      <p>شارك بأفكارك وتعليقاتك مع قرّاء ومهتمين بنفس مجالك.</p>
+    </div>
+  </section>
+
+  <section id="about" class="features">
+    <div class="card">
+      <h3>عن المدونة</h3>
+      <p>مدونة الاتصال العربي تهدف إلى نشر المعرفة، بناء مجتمع عربي متفاعل، وتقديم محتوى احترافي في الاتصالات والتكنولوجيا.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="features">
+    <div class="card">
+      <h3>تواصل معنا</h3>
+      <p>للاستفسارات والتواصل راسلنا عبر البريد الإلكتروني: <a>info@e.gov.kw</a></p>
+      <a> <a href="https://e.gov.kw">الصفحه الرسمية </a></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <span id="year">2025</span> مدونة الاتصال العربي – جميع الحقوق محفوظة</p>
+    <p><a href="privacy.html">سياسة الخصوصية</a></p>
+    <p><a href="temrs.html">الشروط والاحكام</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>

@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سياسة الخصوصية وأدوار الأمن – مدونة الاتصال العربي</title>
+  <meta name="description" content="صفحة سياسة الخصوصية وأدوار الأمن والمساءلة لمدونة الاتصال العربي." />
+  <link rel="canonical" href="https://example.com/privacy" />
+  <style>
+    :root {
+      --bg: #0f172a;          /* slate-900 */
+      --card: #111827;        /* gray-900 */
+      --muted: #94a3b8;       /* slate-400 */
+      --text: #e5e7eb;        /* gray-200 */
+      --accent: #22d3ee;      /* cyan-400 */
+      --accent-2: #38bdf8;    /* sky-400 */
+      --ring: rgba(56,189,248,.35);
+      --border: #1f2937;      /* gray-800 */
+    }
+    html, body {
+      height: 100%;
+      background: radial-gradient(1200px 600px at 90% -10%, rgba(34,211,238,.18), transparent 40%),
+                  radial-gradient(900px 500px at -10% 10%, rgba(56,189,248,.12), transparent 40%),
+                  var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Naskh Arabic UI", Cairo, Tajawal, sans-serif;
+      line-height: 1.8;
+    }
+    .skip-link {
+      position: absolute; inset-inline-start: 1rem; top: -40px; padding:.5rem 1rem; background:#000; color:#fff; z-index:999;
+    }
+    .skip-link:focus { top: 1rem; outline: 3px solid var(--accent); border-radius: .5rem; }
+
+    header {
+      position: sticky; top:0; backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(17,24,39,.9), rgba(17,24,39,.7));
+      border-bottom: 1px solid var(--border);
+      z-index: 50;
+    }
+    .container { max-width: 980px; margin: 0 auto; padding: 1.25rem; }
+    .brand {
+      display:flex; align-items:center; gap:.75rem; padding: .5rem 0;
+    }
+    .brand .logo {
+      width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 10px 30px rgba(56,189,248,.25), inset 0 0 0 1px rgba(255,255,255,.2);
+    }
+    h1 { font-size: clamp(1.6rem, 2vw + 1rem, 2.2rem); margin: .25rem 0 0; }
+    .subtitle { color: var(--muted); margin-top: .25rem; }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      border: 1px solid var(--border);
+      border-radius: 18px; padding: 1.25rem; margin-block: 1rem;
+      box-shadow: 0 10px 25px rgba(2,6,23,.25);
+    }
+    .badge { display:inline-block; padding:.25rem .6rem; border-radius: 999px; font-size:.875rem; border:1px solid var(--border); color: var(--muted); }
+    .muted { color: var(--muted); }
+
+    .toc { border: 1px dashed var(--border); border-radius: 16px; padding: 1rem; background: rgba(2,6,23,.35); }
+    .toc ol { columns: 2; gap: 2rem; margin: 0; padding-inline-start: 1rem; }
+    @media (max-width: 680px){ .toc ol { columns: 1; } }
+    .toc a { color: var(--accent-2); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+
+    h2 { font-size: 1.4rem; margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: .35rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.25rem; }
+
+    details { border: 1px solid var(--border); border-radius: 14px; padding: .75rem 1rem; background: rgba(255,255,255,.02); margin: .75rem 0; }
+    details > summary { cursor: pointer; font-weight: 600; }
+    details[open] { box-shadow: 0 0 0 3px var(--ring); }
+
+    code, kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Noto Sans Mono", monospace; }
+
+    .note { border-inline-start: 4px solid var(--accent-2); padding: .5rem .75rem; background: rgba(56,189,248,.06); border-radius: 8px; }
+
+    footer { margin-top: 3rem; padding: 2rem 0; border-top: 1px solid var(--border); color: var(--muted); }
+    a { color: var(--accent); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PrivacyPolicy",
+    "inLanguage": "ar",
+    "name": "سياسة الخصوصية – مدونة الاتصال العربي",
+    "url": "https://example.com/privacy",
+    "publisher": {
+      "@type": "Organization",
+      "name": "مدونة الاتصال العربي"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">تخطي إلى المحتوى</a>
+  <header>
+    <div class="container brand" role="banner">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <h1>مدونة الاتصال العربي</h1>
+        <p class="subtitle">سياسة الخصوصية وأدوار الأمن</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section class="card" aria-labelledby="about">
+      <p id="about" class="muted">هذه الوثيقة تشرح كيف نتعامل مع بياناتك وكيف نحافظ على أمنها في <strong>مدونة الاتصال العربي</strong>. آخر تحديث:
+        <time datetime="2025-08-26">26 أغسطس 2025</time>.
+      </p>
+      <p class="note" role="note">تنبيه: هذا نموذج عام لأغراض المعلومات فقط وليس نصيحة قانونية. يرجى مراجعته ليتوافق مع تشريعات بلدك (مثل GDPR/CCPA) قبل الاعتماد عليه.</p>
+    </section>
+
+    <nav class="toc card" aria-label="جدول المحتويات">
+      <strong class="badge">المحتويات</strong>
+      <ol>
+        <li><a href="#scope">نطاق السياسة</a></li>
+        <li><a href="#collection">المعلومات التي نجمعها</a></li>
+        <li><a href="#cookies">ملفات تعريف الارتباط (الكوكيز)</a></li>
+        <li><a href="#use">كيفية استخدام المعلومات</a></li>
+        <li><a href="#lawful-basis">الأساس القانوني للمعالجة</a></li>
+        <li><a href="#sharing">مشاركة البيانات</a></li>
+        <li><a href="#retention">الاحتفاظ بالبيانات</a></li>
+        <li><a href="#security">أمن المعلومات</a></li>
+        <li><a href="#your-rights">حقوقك</a></li>
+        <li><a href="#children">خصوصية الأطفال</a></li>
+        <li><a href="#changes">تغييرات السياسة</a></li>
+        <li><a href="#security-roles">أدوار الأمن والمسؤوليات</a></li>
+        <li><a href="#contact">التواصل معنا</a></li>
+      </ol>
+    </nav>
+
+    <section id="scope" class="card">
+      <h2>نطاق السياسة</h2>
+      <p>تنطبق هذه السياسة على موقع <strong>مدونة الاتصال العربي</strong> وجميع الصفحات والخدمات التابعة له. باستخدامك للموقع فإنك توافق على بنود هذه السياسة.</p>
+    </section>
+
+    <section id="collection" class="card">
+      <h2>المعلومات التي نجمعها</h2>
+      <details>
+        <summary>بيانات يقدمها المستخدم طواعية</summary>
+        <ul>
+          <li>الاسم، البريد الإلكتروني، وبيانات التواصل عند الاشتراك في النشرة أو إرسال نموذج اتصال.</li>
+          <li>محتوى التعليقات أو الرسائل.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>بيانات تجمع تلقائيًا</summary>
+        <ul>
+          <li>عناوين IP، نوع المتصفح، نظام التشغيل، صفحات الإحالة، ووقت/مدة الزيارة.</li>
+          <li>معرّفات الأجهزة وبيانات التحليلات المجمّعة وغير القابلة للتعرّف على هوية صاحبها.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="cookies" class="card">
+      <h2>ملفات تعريف الارتباط (الكوكيز)</h2>
+      <p>نستخدم الكوكيز لتحسين الأداء وتخصيص التجربة وقياس الاستخدام. يمكنك إدارة أو رفض الكوكيز من إعدادات المتصفح. قد تؤثر القيود على بعض وظائف الموقع.</p>
+      <ul>
+        <li><strong>كوكيز ضرورية:</strong> لتشغيل الموقع الأساسي (المصادقة/الأمان).</li>
+        <li><strong>كوكيز أداء:</strong> لتحليلات استخدام مجهولة الهوية.</li>
+        <li><strong>كوكيز تفضيلات:</strong> لحفظ اللغة والوضع الليلي وما شابه.</li>
+      </ul>
+    </section>
+
+    <section id="use" class="card">
+      <h2>كيفية استخدام المعلومات</h2>
+      <ul>
+        <li>تقديم المحتوى والخدمات وتشغيل الموقع وصيانته.</li>
+        <li>التواصل بشأن التحديثات، النشرات، أو الرد على الاستفسارات.</li>
+        <li>تحسين الأداء وتجربة المستخدم وإجراء التحليلات.</li>
+        <li>منع الإساءة والكشف عن الاحتيال والامتثال للالتزامات القانونية.</li>
+      </ul>
+    </section>
+
+    <section id="lawful-basis" class="card">
+      <h2>الأساس القانوني لمعالجة البيانات</h2>
+      <ul>
+        <li><strong>الموافقة:</strong> عند الاشتراك في النشرة أو قبول الكوكيز غير الضرورية.</li>
+        <li><strong>تنفيذ عقد:</strong> عند طلبك خدمة أو ميزة محددة.</li>
+        <li><strong>مصلحة مشروعة:</strong> تحسين أمن الموقع وجودة المحتوى.</li>
+        <li><strong>الالتزام القانوني:</strong> تلبية طلبات الجهات التنظيمية حيثما ينطبق.</li>
+      </ul>
+    </section>
+
+    <section id="sharing" class="card">
+      <h2>مشاركة البيانات</h2>
+      <p>لا نبيع بياناتك الشخصية. قد نشارك بياناتًا محدودة مع:</p>
+      <ul>
+        <li><strong>مزودي الخدمة</strong> (الاستضافة، التحليلات، البريد) بموجب اتفاقيات معالجة بيانات.</li>
+        <li><strong>الجهات القانونية</strong> عند وجود التزام قانوني أو لحماية حقوقنا.</li>
+      </ul>
+      <p class="muted">أمثلة (حدّثها وفق واقعك): Google Analytics، Cloudflare، MailerLite.</p>
+    </section>
+
+    <section id="retention" class="card">
+      <h2>الاحتفاظ بالبيانات</h2>
+      <p>نحتفظ بالبيانات فقط للمدة اللازمة للأغراض الموضحة أعلاه، ثم نقوم بحذفها أو إخفاء هويتها وفق سياسات الاحتفاظ الداخلية.</p>
+    </section>
+
+    <section id="security" class="card">
+      <h2>أمن المعلومات</h2>
+      <ul>
+        <li>نقل آمن باستخدام <abbr title="طبقة المقابس الآمنة/أمن النقل">TLS</abbr> حيثما أمكن.</li>
+        <li>مبدأ أقلّ صلاحية لتقييد الوصول الداخلي.</li>
+        <li>مصادقة متعددة العوامل لحسابات المشرفين.</li>
+        <li>نسخ احتياطية منتظمة وخطط تعافي من الكوارث.</li>
+        <li>تحديثات وتصحيحات أمنية للبرمجيات والبنى التحتية.</li>
+        <li>مراقبة أساسية للتنبيهات والمحاولات المشبوهة.</li>
+      </ul>
+    </section>
+
+    <section id="your-rights" class="card">
+      <h2>حقوقك</h2>
+      <p>حسب القوانين المعمول بها قد يكون لك حقوق مثل: الوصول، التصحيح، الحذف، تقييد/اعتراض المعالجة، ونقل البيانات. يمكنك ممارسة حقوقك عبر جهة الاتصال أدناه، وسنستجيب خلال إطار زمني معقول.</p>
+    </section>
+
+    <section id="children" class="card">
+      <h2>خصوصية الأطفال</h2>
+      <p>الموقع موجه للجمهور العام ولا يستهدف الأطفال دون السن القانوني. في حال تبيّن لنا جمع بيانات طفل دون قصد، سنحذفها خلال وقت معقول.</p>
+    </section>
+
+    <section id="changes" class="card">
+      <h2>تغييرات السياسة</h2>
+      <p>قد نقوم بتحديث هذه السياسة من وقت لآخر. سننشر أي تغيير مع <em>تاريخ سريان</em> مُحدّث أعلى الصفحة.</p>
+    </section>
+
+    <section id="security-roles" class="card">
+      <h2>أدوار الأمن والمسؤوليات</h2>
+      <p>يحدد هذا القسم الأدوار الرئيسية لإدارة الأمن في <strong>مدونة الاتصال العربي</strong> ومسؤوليات كل دور.</p>
+
+      <article class="card">
+        <h3>1) المالك/مسؤول التحكم بالبيانات</h3>
+        <ul>
+          <li>اعتماد سياسة الخصوصية والأمن ومراجعتها بشكل دوري.</li>
+          <li>تحديد الأهداف والمخاطر وتخصيص الموارد.</li>
+          <li>التحقق من امتثال الموقع للأنظمة ذات الصلة.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>2) قائد الأمن (Security Lead)</h3>
+        <ul>
+          <li>تطبيق ضوابط الأمن، ومتابعة الثغرات والتحديثات.</li>
+          <li>إدارة الوصول والصلاحيات وفق مبدأ أقلّ صلاحية.</li>
+          <li>وضع خطة استجابة للحوادث، والإشراف على النسخ الاحتياطية واختبارات الاستعادة.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>3) المحررون/الكتّاب</h3>
+        <ul>
+          <li>استخدام كلمات مرور قوية ومصادقة متعددة العوامل للحسابات.</li>
+          <li>تجنب رفع ملفات خطرة أو إدراج روابط غير موثوقة.</li>
+          <li>الالتزام بإرشادات الخصوصية عند التعامل مع بيانات المستخدمين (مثل التعليقات).</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>4) المشرفون/المدراء</h3>
+        <ul>
+          <li>مراجعة سجلات الدخول والنشاط دوريًا.</li>
+          <li>منح وإلغاء الصلاحيات بسرعة عند تغيّر المهام.</li>
+          <li>مراجعة طلبات الوصول الحساسة والموافقة عليها.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>5) المطوّرون/الدعم الفني</h3>
+        <ul>
+          <li>اتباع أفضل ممارسات تطوير الويب الآمن (تحديثات، اختبارات، مراجعة شيفرة).</li>
+          <li>تهيئة رؤوس أمان HTTP (CSP، HSTS، X-Frame-Options، X-Content-Type-Options).</li>
+          <li>تجزئة كلمات المرور باستخدام خوارزميات قوية (مثل bcrypt/argon2) عندما يكون ذلك ضمن نطاق النظام.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>6) المعالِجون الخارجيون (مزودو الخدمة)</h3>
+        <ul>
+          <li>اتفاقيات معالجة بيانات واضحة تحدد نطاق وطبيعة المعالجة.</li>
+          <li>التزام بمعايير أمان مناسبة وإخطارات بالحوادث الأمنية.</li>
+          <li>إجراء تقييمات دورية للمخاطر ومراجعات للعقود.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>عملية الإبلاغ عن الحوادث</h3>
+        <ol>
+          <li>الكشف والاحتواء الأولي.</li>
+          <li>التقييم والتوثيق وإشعار الأطراف ذات الصلة.</li>
+          <li>المعالجة الجذرية، الاستعادة، والدروس المستفادة.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>التواصل معنا</h2>
+      <p>للاستفسارات أو ممارسة أي من حقوقك، تواصل عبر البريد: <a href="mailto:privacy@example.com">privacy@example.com</a><br/>أو عبر نموذج الاتصال على الموقع.</p>
+      <address class="muted">كيان النشر: مدونة الاتصال العربي – بلد/مدينة: ______ – هاتف (اختياري): ______</address>
+    </section>
+
+    <section class="card" aria-labelledby="dev">
+      <h2 id="dev">ملاحظات للتخصيص (للمطورين)</h2>
+      <ul class="muted">
+        <li>استبدل <code>example.com</code> وروابط مزودي الخدمة بأسماء حقيقية.</li>
+        <li>حدّث قائمة الكوكيز وأغراضها بما يتوافق مع واقع موقعك.</li>
+        <li>إن كنت تقدم خدمات للمقيمين في الاتحاد الأوروبي أو كاليفورنيا، أضف أقسامًا تفصيلية لـ <abbr title="اللائحة العامة لحماية البيانات">GDPR</abbr> و<abbr title="قانون خصوصية المستهلك في كاليفورنيا">CCPA</abbr> (الحق في الانسحاب/عدم البيع، ممثل الاتحاد الأوروبي إن وجد، الخ).</li>
+        <li>أضف سياسة ملفات السجل (Server Logs) إن كنت تحتفظ بها، وسياسة التصدير/التحويل الدولي للبيانات إن وُجدت.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="container" role="contentinfo">
+    <p>© <span id="year">2025</span> مدونة الاتصال العربي. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script>
+    // تحديث السنة تلقائيًا
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
